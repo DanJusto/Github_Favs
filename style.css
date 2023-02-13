@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --hue: 194;
+
+    --text-primary-color: hsl(var(--hue), 9%, 89%);
+    --text-placeholder-color: hsl(var(--hue), 6%, 70%);
+    --text-secundary-color: hsl(var(--hue), 4%, 40%);
+    --text-remove-color: hsl(355, 92%, 58%);
+
+    --bg-text-button: hsl(var(--hue), 91%, 25%);
+    --bg-primary: hsl(var(--hue), 60%, 7%);
+    --bg-thead: hsl(var(--hue), 82%, 33%);
+    --bg-tbody-odd: hsla(var(--hue), 21%, 1%, 0.5);
+
+    --ff-primary: 'Roboto', 'sans serif';
+    --ff-secundary: 'Roboto Mono', 'sans serif';
+}
+
+body {
+    font-size: 1.6rem;
+    background: #000000;
+}
+
+body * {
+    font-family: var(--ff-primary);
+    color: var(--text-primary-color);
+}
+
+#app {
+    max-width: 1024px;
+    min-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2.5rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8.5rem;
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    height: 4.8rem;
+    width: 45rem;
+    padding: 0 1.6rem;
+    border-radius: .5rem;
+    border: none;
+    background: var(--bg-primary);
+    color: var(--text-primary-color);
+    outline: none;
+}
+
+.search input::placeholder {
+    color:var(--text-placeholder-color);
+}
+
+.search button {
+    height: 4.8rem;
+    padding: 1.2rem 3.2rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    border-radius: .5rem;
+    border: none;
+    background: var(--bg-text-button);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+}
+
+.search button:hover {
+    color: var(--bg-text-button);
+    background: white;
+}
+
+.search button:hover svg path {
+    fill: var(--bg-text-button);
+}
+
+table {
+    width: 100%;
+    background: var(--bg-primary);
+    border-radius: 1.2rem;
+    border-collapse: collapse;
+}
+
+thead {
+    background: var(--bg-thead);
+    font-size: 2rem;
+    line-height: 160%;
+}
+
+table th {
+    padding: 1.6rem 4rem;
+    text-align: left;
+}
+
+table th:first-child {
+    border-top-left-radius: 1.2rem;
+}
+
+table th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+
+table tr:nth-child(odd) {
+    background: var(--bg-tbody-odd);
+}
+table tbody tr {
+    border-top: 1px solid hsl(194, 30%, 30%);
+}
+
+table td {
+    padding: 2rem 4rem;
+    text-align: left;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.user img {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user a {
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 160%;
+}
+
+.user a p {
+    font-weight: 700;
+}
+
+.remove button {
+    border: none;
+    background: transparent;
+    color: var(--text-remove-color);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 160%;
+    cursor: pointer;
+}
+
+.remove button:hover {
+    opacity: 0.8;
+}
+
+.nofav {
+    height: 62.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
